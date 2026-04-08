@@ -380,7 +380,7 @@ const projects: Project[] = [
     id: "gitintellect",
     category: "AI Dev Tool for developers",
     title: "GitIntellect",
-    src: "/assets/projects-screenshots/gitintellect/poster-git.png",
+    src: "/assets/projects-screenshots/docudialog/poster-chat.png",
     screenshots: ["landing.png"],
     skills: {
       frontend: [
