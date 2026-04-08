@@ -427,9 +427,9 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/gitintellect/sign-in.png`,
-              `${BASE_PATH}/gitintellect/gitrepo.png`,
-              `${BASE_PATH}/gitintellect/main.png`,
+              `${BASE_PATH}/project4/sign-in.png`,
+              `${BASE_PATH}/project4/gitrepo.png`,
+              `${BASE_PATH}/project4/main.png`,
             ]}
           />
           <p className="font-mono mb-2">
