@@ -118,18 +118,12 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiTensorflow />,
   },
- langchain: {
-  title: "LangChain",
-  bg: "black",
-  fg: "white",
-  icon: (
-    <img 
-      src="/assets/openai_dark.svg" 
-      alt="LangChain"
-      className="w-4 h-4 object-contain"
-    />
-  ),
-},
+  langchain: {
+    title: "LangChain",
+    bg: "black",
+    fg: "white",
+    icon: <span className="text-x font-bold">⛓️‍💥</span>,
+  },
   pineconeDB: {
     title: "PineconeDB",
     bg: "black",
@@ -160,7 +154,18 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiClerk />,
   },
-
+  bunnycdn: {
+    title: "BunnyCDN",
+    bg: "black",
+    fg: "white",
+    icon: (
+      <img
+        src="/assets/rabbit-main.png"
+        alt="Bunny"
+        className="w-4 h-4 object-contain"
+      />
+    ),
+  },
   python: {
     title: "Python",
     bg: "black",
@@ -217,8 +222,9 @@ const projects: Project[] = [
       ],
     },
     live: "https://cogniva-ai-lemon.vercel.app/", // replace with actual URL
-    github: "https://github.com/IBs-DevStudio/Cogniva-Personalized.AI.Tutoring-Project",
-   // replace with actual repo
+    github:
+      "https://github.com/IBs-DevStudio/Cogniva-Personalized.AI.Tutoring-Project",
+    // replace with actual repo
     get content() {
       return (
         <div>
@@ -466,7 +472,7 @@ const projects: Project[] = [
       backend: [
         PROJECT_SKILLS.node,
         PROJECT_SKILLS.postgres,
-        // PROJECT_SKILLS.bunny,
+        PROJECT_SKILLS.bunnycdn,
         // PROJECT_SKILLS.arcjet,
         // PROJECT_SKILLS.auth,
       ],
@@ -543,76 +549,74 @@ const projects: Project[] = [
     },
   },
   {
-  id: "indra",
-  category: "AI / Computer Vision",
-  title: "Indra — Indra's Eye",
-  src: "/assets/projects-screenshots/indranetra/intro-indra.png",
-  screenshots: ["info1.png"],
-  skills: {
-    frontend: [
-      PROJECT_SKILLS.ts,
-      PROJECT_SKILLS.next,
-      PROJECT_SKILLS.tailwind,
-      PROJECT_SKILLS.shadcn,
-    ],
-    backend: [
-      PROJECT_SKILLS.python,   // adjust to your actual skills
-      PROJECT_SKILLS.node,
-      PROJECT_SKILLS.tensorflow,
-    ],
+    id: "indra",
+    category: "AI / Computer Vision",
+    title: "Indra — Indra's Eye",
+    src: "/assets/projects-screenshots/indranetra/intro-indra.png",
+    screenshots: ["info1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
+      backend: [
+        PROJECT_SKILLS.python, // adjust to your actual skills
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.tensorflow,
+      ],
+    },
+    live: "https://indra-netra.vercel.app",
+    github: "https://github.com/IBs-DevStudio/Indra_netra",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            Real-time military vehicle detection for the Indian Armed Forces
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Indra is an AI/ML-powered surveillance system that detects and
+            classifies military vehicles through live camera feeds and batch
+            image analysis — achieving <strong>94.7% detection accuracy</strong>{" "}
+            at <strong>15–30 FPS</strong> with an{" "}
+            <strong>87% reduction in manual error</strong>.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Live Detection</TypographyH3>
+          <p className="font-mono mb-2">
+            Real-time camera feed processing with instant vehicle classification
+            and threat alerts. Multi-stream surveillance grid for simultaneous
+            monitoring across multiple feeds.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/indranetra/info1.png`,
+              `${BASE_PATH}/indranetra/info2.png`,
+              `${BASE_PATH}/indranetra/info3.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">
+            Analysis & Intelligence
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            Batch image analysis with threat assessment scoring, dynamic
+            analytics dashboards with detection insights, and configurable
+            detection parameters tuned for defence-grade requirements.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/indranetra/info4.png`,
+              `${BASE_PATH}/indranetra/info5.png`,
+              `${BASE_PATH}/indranetra/info6.png`,
+            ]}
+          />
+        </div>
+      );
+    },
   },
-  live: "https://indra-netra.vercel.app",
-  github: "https://github.com/IBs-DevStudio/Indra_netra",
-  get content() {
-    return (
-      <div>
-        <TypographyP className="font-mono text-2xl text-center">
-          Real-time military vehicle detection for the Indian Armed Forces
-        </TypographyP>
-        <TypographyP className="font-mono">
-          Indra is an AI/ML-powered surveillance system that detects and
-          classifies military vehicles through live camera feeds and batch image
-          analysis — achieving{" "}
-          <strong>94.7% detection accuracy</strong> at{" "}
-          <strong>15–30 FPS</strong> with an{" "}
-          <strong>87% reduction in manual error</strong>.
-        </TypographyP>
-        <ProjectsLinks live={this.live} repo={this.github} />
-
-        <TypographyH3 className="my-4 mt-8">Live Detection</TypographyH3>
-        <p className="font-mono mb-2">
-          Real-time camera feed processing with instant vehicle classification
-          and threat alerts. Multi-stream surveillance grid for simultaneous
-          monitoring across multiple feeds.
-        </p>
-        <SlideShow
-          images={[
-            `${BASE_PATH}/indranetra/info1.png`,
-            `${BASE_PATH}/indranetra/info2.png`,
-            `${BASE_PATH}/indranetra/info3.png`,
-          ]}
-        />
-
-        <TypographyH3 className="my-4 mt-8">
-          Analysis & Intelligence
-        </TypographyH3>
-        <p className="font-mono mb-2">
-          Batch image analysis with threat assessment scoring, dynamic analytics
-          dashboards with detection insights, and configurable detection
-          parameters tuned for defence-grade requirements.
-        </p>
-        <SlideShow
-          images={[
-            `${BASE_PATH}/indranetra/info4.png`,
-            `${BASE_PATH}/indranetra/info5.png`,
-            `${BASE_PATH}/indranetra/info6.png`,
-          ]}
-        />
-      </div>
-    );
-  },
-},
-
 ];
 
 export default projects;
